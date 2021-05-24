@@ -5,11 +5,11 @@
     "lib": ["es6"],                                
     "allowJs": true,                               
     "outDir": "./dist",                            
-    "rootDir": "./src",                             
+    "rootDir": ".",                             
     "removeComments": true,                        
     "strict": true,                                
     "typeRoots": [
-      "./node_module/@types",
+      "./node_modules/@types",
       "./src/@types"
     ],                               
     "esModuleInterop": true,
@@ -20,7 +20,12 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl":".",
     "paths": {
-      "@controllers/*":["./src/controller/*"]
+      "@controllers/*":["./src/controller/*"],
+      "@models/*":["./src/models/*"]
     }
-  }
+  },
+  "include":[
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"]
 }
